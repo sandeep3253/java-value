@@ -1,17 +1,20 @@
 class str{
-  static int change(int val[],int ch[]){
-     int totoa= 0;
-     for(int i=0;i<val.length;i++){
-        for(int j=0;j<i;j++){
-           totoa = (val[j] === ch[j]);
-             }
-            }
-          }  
-        public static void main (String args[]){
-           int val[]={4,23,241,2321,9,1};
-           int ch[] ={1,4,32,235,23,2,9};
-           change();
-           System.out.println(totoa);
-           }
-          }
-          
+    public static void main (String args[]){
+           String p="";
+           String up = "sdksalfak";
+          change(p,up);
+    }
+    static void change(String p,String up){
+        if(up.isEmpty()){
+             System.out.print(p);
+             return;
+        }
+        char ch = up.charAt(0);
+        if (ch =='a'){
+            change(p,up.substring(1));
+        }
+        else{
+            change(p+ch,up.substring(1));
+        }
+    }
+}
